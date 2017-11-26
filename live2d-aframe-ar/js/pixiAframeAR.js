@@ -1,6 +1,6 @@
-PIXI.loader.add('moc', "../assets/Koharu/Koharu.moc3", { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.BUFFER })
-PIXI.loader.add('texture', "../assets/Koharu/Koharu.png")
-PIXI.loader.add('motion', "../assets/Koharu/Koharu.motion3.json", { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
+PIXI.loader.add('moc', "assets/Koharu/Koharu.moc3", { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.BUFFER })
+PIXI.loader.add('texture', "assets/Koharu/Koharu.png")
+PIXI.loader.add('motion', "assets/Koharu/Koharu.motion3.json", { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
 PIXI.loader.once('complete', onComplate);
 PIXI.loader.load();
 function onComplate(loader, resources) {
