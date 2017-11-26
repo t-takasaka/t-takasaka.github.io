@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	        <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.6.1/aframe-master.min.js"></script>
+		<script src="js/aframe-ar.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+		<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+		<!--By including below library in your project you agree to http://live2d.com/eula/live2d-proprietary-software-license-agreement_en.html-->
+		<script src="https://s3-ap-northeast-1.amazonaws.com/cubism3.live2d.com/sdk/js_eap/live2dcubismcore.min.js"></script>
+		<script src="js/live2dcubismframework.js"></script>
+		<script src="js/live2dcubismpixi.js"></script>
+		<script src="js/pixiAframeAR.js"></script>
+	</head>
+	<body style="margin:0px; overflow:hidden;">
+		<a-scene embedded arjs="debugUIEnabled:false;">
+			<a-marker-camera preset='custom' url='assets/live2d_logo.patt'>
+			</a-marker-camera>
+		</a-scene>
+	</body>
+</html>
