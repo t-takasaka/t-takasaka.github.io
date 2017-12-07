@@ -33,7 +33,7 @@ function onComplate(loader, resources) {
 	plane.setAttribute('width', '5');
 	plane.setAttribute('position', '0 1.5 0');
 
-	var marker = document.querySelector('a-marker-camera');
+	var marker = document.querySelector('a-marker');
 	marker.appendChild(plane);
 
 	AFRAME.registerComponent('koharu', {
