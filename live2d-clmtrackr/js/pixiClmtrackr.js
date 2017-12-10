@@ -44,7 +44,7 @@ function onComplate(loader, resources) {
 	var update = function() {
 		window.requestAnimFrame(update);
 		overlayContext.clearRect(0, 0, webcam.width, webcam.height);
-
+/*
 		//mosaic
 		if(webcam.width > 0){
 			var mosaicSize = 40;
@@ -65,7 +65,7 @@ function onComplate(loader, resources) {
 			}
 			overlayContext.putImageData(dest, 0, 0);
 		}
-
+*/
 		//Calcate parameters
 		var pos = ctrack.getCurrentPosition();
 		if(pos){
