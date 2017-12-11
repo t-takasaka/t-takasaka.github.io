@@ -84,8 +84,10 @@ function onComplate(loader, resources) {
 			params["PARAM_BROW_R_Y"] = 2 * (pos[29][1] - pos[17][1]) / lipH - 4;
 
 			for (key in params) {
-				var index = model.parameters.ids.indexOf(key);
-				if (index >= 0) { model.parameters.values[index] = params[key] * 1.5; }
+				if(typeof(params[key]) == 'number'){
+					var index = model.parameters.ids.indexOf(key);
+					if (index >= 0) { model.parameters.values[index] = params[key] * 1.5; }
+				}
 			}
 			ctrack.draw(overlay); 
 		}
