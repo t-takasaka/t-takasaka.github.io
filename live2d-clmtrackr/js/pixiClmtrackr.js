@@ -16,16 +16,6 @@ function onComplate(loader, resources) {
 	app.stage.addChild(model);
 	app.stage.addChild(model.masks);
 	app.ticker.add(function (deltaTime) {
-		//Set parameters
-console.log("===============");
-console.log(params["PARAM_ANGLE_X"]);
-console.log(params["PARAM_ANGLE_Y"]);
-console.log(params["PARAM_ANGLE_Z"]);
-		for (key in params) {
-			var index = model.parameters.ids.indexOf(key);
-			if (index >= 0) { model.parameters.values[index] = params[key] * 1.5; }
-		}
-
 		model.update(deltaTime);
 		model.masks.update(app.renderer);
 	});
@@ -73,12 +63,6 @@ console.log(params["PARAM_ANGLE_Z"]);
 		//Calcate parameters
 		var pos = ctrack.getCurrentPosition();
 		if(pos){
-console.log("-------------");
-console.log(pos[62][0]);
-console.log(pos[2][0]);
-console.log(pos[12][0]);
-console.log(pos[33][0]);
-
 			var faceR = pos[62][0] - pos[2][0];
 			var faceL = pos[12][0] - pos[62][0];
 			var vecR = [pos[2][0] - pos[7][0], pos[2][1] - pos[7][1]];
@@ -99,6 +83,10 @@ console.log(pos[33][0]);
 			params["PARAM_BROW_L_Y"] = 2 * (pos[24][1] - pos[21][1]) / lipH - 4;
 			params["PARAM_BROW_R_Y"] = 2 * (pos[29][1] - pos[17][1]) / lipH - 4;
 
+			for (key in params) {
+				var index = model.parameters.ids.indexOf(key);
+				if (index >= 0) { model.parameters.values[index] = params[key] * 1.5; }
+			}
 			ctrack.draw(overlay); 
 		}
 	}
