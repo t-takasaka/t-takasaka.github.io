@@ -85,6 +85,7 @@ function onComplate(loader, resources) {
 
 			for (key in params) {
 				if(typeof(params[key]) == 'number'){
+console.log(params[key]);
 					var index = model.parameters.ids.indexOf(key);
 					if (index >= 0) { model.parameters.values[index] = params[key] * 1.5; }
 				}
